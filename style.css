@@ -4,10 +4,11 @@
     box-sizing: border-box;
     }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;1,600&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 div.page_container {
     /* padding: 0 70px; */
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif */
 }
 div.page_container a {
@@ -18,7 +19,7 @@ div.page_container a {
     border: solid 1px #000000;
 }
 
-/* nav bar */
+/*  ----------------------------------- nav bar----------------------- */
 
 div.nav_bar {
     width: 100%;
@@ -52,7 +53,7 @@ div.menu_right a {
     font-weight: light;
 }
 
-/*  Sezione trend     */
+/* ---------------------------------------- Sezione trend  -----------------------------   */
 
 div.trend_section {
     width: 100%;
@@ -94,7 +95,7 @@ span.number_trend {
     font-size: 32px;
     margin-right: 10px;
 }
-/* classi riutilizzate per titolo articolo */
+/* ------------  classi riutilizzate per titolo articolo  ------------- */
 
 div.author_class {
     margin:6px 0;
@@ -113,9 +114,8 @@ span.author_name {
 h2.item_tittle {
     font-size: 16px;
     margin-bottom: 6px;
-    /* max-height: 36px; */
     max-width: 90%;
-    white-space: nowrap;        /* non mi compila due righe  */
+    white-space: nowrap;        
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -138,7 +138,7 @@ div.main_section {
     align-items: stretch;
 }
 
-/* Sezione lista articoli */
+/*  --------------------------------------   Sezione lista articoli  ------------------------------- */
 
 div.content_list {
     width: 60%;
@@ -156,24 +156,26 @@ div.item_box {
     flex-direction: column;
     justify-content: space-between;
     width: 480px;
+    height: 134px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: wrap;
+    white-space: normal;
 }
 div.item_card h2.item_tittle {
     font-size: 20px;
-    /* white-space: nowrap;       
-    overflow: hidden;
-    text-overflow: ellipsis;  */
-    max-height: 48px;
+    max-height: 40px;
     width: 100%;
 }
 p.item_summary {
     font-size: 16px;
     width: 100%;
     color:#6a6a6a;       
-    overflow: hidden;
     max-height: 38px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 img.item_image {
     flex-basis: 200px;
@@ -187,6 +189,7 @@ div.badge_item {
     margin-right: 20px;
     font-size: 20px;
     color: rgb(107, 107, 107);
+    margin-top: 4px;
 }
 span.topic_item {
     padding: 6px 8px;
@@ -196,7 +199,7 @@ span.topic_item {
     margin-left: 5px;
 }
 
-/* sidebar class */
+/*  ------------------------------------      sidebar class ----------------------------------------*/
 
 div.right_sidebar {
     width: 33%;
@@ -221,6 +224,7 @@ div.topic_box {
 span.topic_pin {
     padding: 8px 16px;
     background-color: rgb(242, 242, 242);
+    color: #6a6a6a;
     border-radius: 22px;
     margin-right: 8px;
     margin-bottom: 10px;
@@ -249,7 +253,7 @@ p.website_link {
 }
 
 
-/* Prova hover autori */
+/*  -------------------------------    Prova hover autori ----------------------------------*/
 span.author_name:hover div.author_tab{
     display: block;
     visibility: visible;
@@ -264,9 +268,7 @@ div.author_tab{
     position:fixed;
     top: 300px;
 }
-
-
-/*                  PAGINA LONG IN      --------------------------------------------   */
+/*         -------------------           ->>>>>>>>>>>>>>  PAGINA LONG IN     <<<<< ------------------------------   */
 div.nav_bar_sign {
     font-size: 24px;
     width: 100%;
@@ -285,7 +287,7 @@ div.top_menu {
     color: rgb(107, 107, 107);
 }
 div.top_menu span{
-    font-size: 20px;
+    font-size: 16px;
 }
 div.input_box {
     background-color: #f2f2f2;
@@ -300,7 +302,7 @@ input.search_bar {
     background-color: rgb(242, 242, 242);
     height: 20px; 
     width: 80%;
-    font-size: 20px; 
+    font-size: 16px; 
     margin: 0 10px; 
     box-shadow: none;
     border: none;
@@ -320,6 +322,10 @@ ul#menu_icon li{
     margin-right: 30px;
     list-style: none;
 }
+ul#menu_icon li:hover{
+    color:#000000;
+    cursor: pointer;
+}
 div.image_logo_sign {
     margin-left: -50px;
     background-color: black;
@@ -329,12 +335,11 @@ img.logo_medium_sign {
     width: auto;
 
 }
-
+/* ------------------------      NABAR PER LA SCELTA DEL TOPIC ---------------------------------- */
 div.topic_navbar {
     width: 100%;
     padding: 30px 0;
     background-color: #ffffff;
-    margin-bottom: 30px;
     border-bottom: solid 1px #f2f2f2;
     position: sticky;
     top:0;
@@ -352,19 +357,20 @@ ul.topic_list li{
 ul.topic_list li:hover {
     border-bottom: solid 1px #6a6a6a;
 }
-
+/* ----------------------------------      MAIN SECTION  ------------------------------------------*/
 div.main_section_sign {
     margin: 0 64px;
     display: flex;
     justify-content: space-between;
 }
-
+/* ----------------------------------     CLASSI PER ARTICOLI --------------------------------------*/
 div.content_list_sign {
     width: 70%;
 }
 div.item_card_sign {
     height: 244px;
     width: 680px;
+    margin-top: 30px;
     display: flex;
     flex-flow: column wrap;
     border-bottom: solid 1px #f2f2f2;
@@ -373,6 +379,8 @@ div.item_box_sign {
     display: flex;
     flex-flow: column wrap;
     width: 540px;
+    overflow: hidden;
+    white-space: normal;
 }
 div.item_card_sign h2.item_tittle_sign {
     font-size: 25px;
@@ -383,13 +391,15 @@ div.item_card_sign h2.item_tittle_sign {
     width: 100%;
 }
 p.item_summary_sign {
-    font-size: 16px;
+    font-size: 20px;
     width: 100%;
-    color:#6a6a6a;
-    white-space: wrap;        
+    color:#6a6a6a; 
+    margin-bottom: 30px;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 80px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
 }
 img.item_image_sign {
     margin-top: 30px;
@@ -414,17 +424,27 @@ div.badge_item_sign {
     font-size: 20px;
     color: rgb(107, 107, 107);
 }
+/*   ------------------------------------ SIDEBAR DI DESTRA ------------------------------------------ */
 div.right_sidebar_sign {
-    margin-top: 57px;
+    padding-top: 57px;
     padding-left: 48px;
     padding-right: 24px;;
     width: 368px;
     border-left: solid 1px #f2f2f2;
-    /* background-color: #1a8917; */
 }
-
 div.staff_picks_link {
     margin: 15px 0;
+}
+p.small {
+    font-size: 12px;
+}
+h2.due_righe {
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 div.social_box {
     margin: 30px 0;
@@ -446,6 +466,76 @@ img.social_logo {
 p.social_caption {
     text-align:center;
     margin: 10px 0;
-    position: sticky;
-    bottom: 0;
+    color: #6a6a6a;
 }
+button.x_link {
+    width: 100%;
+    border-radius: 20px;
+    height: 40px;
+    font-size: 15px;
+    background-color: #ffffff;
+    border: solid 1px rgb(107, 107, 107);
+}
+div.tasto_social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+div.separatore {
+    display: block;
+    width: 34px;
+    background-color: #1a8917;
+}
+span.no_social {
+    color: #6a6a6a;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: 30px;
+}
+/* ----------------------   WHO TO FOLLOWW  -------------- */
+div.scheda_follow {
+
+    height: 65px;
+    width: 303px;
+    padding-top: 16px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom:15px;
+}
+img.profilo_img {
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+}
+div.profilo_info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2px;
+}
+button.ok_follow {
+    height: 32px;
+    padding: 5px 12px;
+    border: solid 1px #000000;
+    background-color: #ffffff;
+    border-radius: 16px;
+    align-self: center;
+}
+h2.name_profilo {
+    font-size: 16px;
+}
+div.profilo_summary {
+    font-size: 12px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+    /* da bloccare in basso allo scorrimento */
+/* div.wl_box_sign {
+    position: sticky;       
+    bottom: 0;
+} */
